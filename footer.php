@@ -1,73 +1,91 @@
-</div><!-- .container -->
-    </div><!-- #content -->
-    <footer id="colophon" class="site-footer bg-dark text-light py-4">
-    <div class="footer-main">
-      <div class="footer-left">
-        <a href="#" class="logo"><img src="<?php echo get_template_directory_uri(); ?>/image/logo.png" alt="Haviland Logo"></a>
-        <div class="company-info">
-          <div class="company-title">CÔNG TY CỔ PHẦN HAVILAND HOUSE</div>
-          <div class="company-address">Trụ sở & chi nhánh</div>
-          <div>Hải Số: 193 Nguyễn Văn Linh, Hải Châu, Đà Nẵng</div>
-          <div>CN NHS: 25-27 Khu Mãi Động 3, Ngũ Hành Sơn, Đà Nẵng</div>
-          <div>CN Sơn Trà: 05 An Nhơn 12, Sơn Trà, Đà Nẵng</div>
-          <div>CN Hoà Xuân: 368 Nguyễn Phước Lan, Hoà Xuân, Đà Nẵng</div>
-        </div>
-      </div>
-      <div class="footer-nav">
-        <ul>
-          <li><a href="#">Giới thiệu</a></li>
-          <li><a href="#">Đặt phòng khách sạn</a></li>
-          <li><a href="#">Hoạt động công ty</a></li>
-          <li><a href="#">Căn hộ dài hạn</a></li>
-          <li><a href="#">Vận hành khách sạn</a></li>
-          <li><a href="#">Chính sách</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Cho thuê văn phòng</a></li>
-          <li><a href="#">Tuyển dụng</a></li>
-          <li><a href="#">Liên hệ</a></li>
-        </ul>
-      </div>
-      <div class="footer-contact">
-        <div>MST: 0401926013 cấp ngày 24/9/2018</div>
-        <div>Được cấp bởi Sở kế hoạch đầu tư thành phố Đà Nẵng</div>
-        <div class="footer-contacts"><span>1900 2323 43</span> | <span>dichvukhachhang@havilandhouse.com</span></div>
-        <div class="footer-socials">
-          <a href="#"><img src="https://ext.same-assets.com/1488520420/2572935895.png" height="24"></a>
-          <a href="#"><img src="https://ext.same-assets.com/1488520420/3239110688.png" height="24"></a>
-        </div>
-        <div class="footer-copyright">© Copyright 2025</div>
-      </div>
-    </div>
-    <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="site-info">
-                      <?php
-                        printf(
-                            /* translators: %1$s: Theme name, %2$s: Theme author. */
-                            esc_html__('%1$s by %2$s', 'cyno-haviland'),
-                            '<a href="http://haviland.test/haviland/">CYNO  </a>',
-                            '<a href="http://haviland.test/haviland/">CYNO  </a>'
-                        );
-                        ?>
-                    </div><!-- .site-info -->
+<?php
+/**
+ * The template for displaying the footer
+ *
+ * @package cyno-haviland
+ */
+?>
+<footer class="bg-gray-900 text-white">
+    <div class="container py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Company Info -->
+            <div class="space-y-4">
+                <img src="<?php echo CYNO_HAVILAND_IMAGES_URL; ?>/assets/images/logo.png" alt="Haviland Logo" class="h-12">
+                <p class="text-gray-400">Haviland - Hệ thống khách sạn và căn hộ cao cấp tại Đà Nẵng</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
                 </div>
-                <div class="col-md-6">
-                    <?php
-                    wp_nav_menu(array(
-                        'theme_location' => 'footer',
-                        'menu_class'     => 'nav justify-content-end',
-                        'container'      => false,
-                        'fallback_cb'    => '__return_false',
-                        'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                        'depth'          => 1,
-                    ));
-                    ?>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Liên kết nhanh</h3>
+                <ul class="space-y-2">
+                    <li><a href="<?php echo site_url('/'); ?>" class="text-gray-400 hover:text-white">Trang chủ</a></li>
+                    <li><a href="<?php echo site_url('/datphong/'); ?>" class="text-gray-400 hover:text-white">Đặt phòng</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Căn hộ dài hạn</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Tư vấn đầu tư</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Liên hệ</h3>
+                <ul class="space-y-2 text-gray-400">
+                    <li class="flex items-start">
+                        <i class="fas fa-map-marker-alt mt-1 mr-2"></i>
+                        <span>29 Yên Bái, Hải Châu, Đà Nẵng</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-phone-alt mr-2"></i>
+                        <span>0236 1234 567</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-envelope mr-2"></i>
+                        <span>info@haviland.vn</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Đăng ký nhận tin</h3>
+                <p class="text-gray-400 mb-4">Nhận thông tin về ưu đãi và tin tức mới nhất từ Haviland</p>
+                <form class="space-y-2">
+                    <input type="email" placeholder="Email của bạn" class="w-full px-4 py-2 rounded bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-primary">
+                    <button type="submit" class="w-full bg-primary text-white px-4 py-2 rounded hover:bg-primary/90">Đăng ký</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="border-t border-gray-800">
+        <div class="container py-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">© <?php echo date('Y'); ?> Haviland. All rights reserved.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Điều khoản sử dụng</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Chính sách bảo mật</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Chính sách cookie</a>
                 </div>
             </div>
         </div>
-  </footer>
-</div>
+    </div>
+</footer>
+
 <?php wp_footer(); ?>
 </body>
-</html> 
+</html>
